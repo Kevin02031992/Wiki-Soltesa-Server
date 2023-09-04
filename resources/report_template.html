@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Hello world!</title>
+</head>
+
+<body>
+
+    <style>
+        table.customTable {
+            width: 100%;
+            background-color: #FFFFFF;
+            border-collapse: collapse;
+            border-width: 1px;
+            border-color: #2e4d83;
+            border-style: solid;
+            color: #000000;
+            font-family: Arial;
+        }
+
+        table.customTable td,
+        table.customTable th {
+            border-width: 1px;
+            border-color: #2e4d83;
+            border-style: solid;
+            padding: 5px;
+            font-family: Arial;
+            font-variant: normal;
+        }
+
+        table.customTable thead {
+            background-color: #2e4d83;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-variant: normal;
+
+        }
+    </style>
+
+    <table class="customTable">
+        <thead>
+            <tr>
+                <th>Registro</th>
+                <th>Usuario</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <td>{{this.action}}</td>
+                <td>{{this.user}}</td>
+                <td>{{this.date}}</td>
+                <td>{{this.time}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+</body>
+
+</html>
